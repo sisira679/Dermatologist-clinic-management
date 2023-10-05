@@ -1,0 +1,551 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lumia Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static '/assets/img/favicon.png'%}" rel="icon">
+  <link href="{% static '/assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="{% static '/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'%}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'%}">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/assets/css/style.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Lumia
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .bn33 {
+      border: 5em;
+      cursor: pointer;
+      outline: none;
+      font-size: 16px;
+      -webkit-transform: translate(0);
+      transform: translate(0);
+      background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+      padding: 0.7em 2em;
+      border-radius: 1px;
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+      -webkit-transition: box-shadow 0.25s;
+      transition: box-shadow 0.25s;
+      color: white;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="{% static '/index.html'%}">Lumia</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="{% static '/index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% static '/#hero'%}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% static '/#about'%}">About</a></li>
+          <li><a class="nav-link scrollto" href="{% static '/#services'%}">Services</a></li>
+          <li><a class="nav-link scrollto " href="{% static '/#portfolio'%}">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="{% static '/#testimonials'%}">Testimonials</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% static '/#'%}">Drop Down 1</a></li>
+              <li class="dropdown"><a href="{% static '/#'%}"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% static '/#'%}">Deep Drop Down 1</a></li>
+                  <li><a href="{% static '/#'%}">Deep Drop Down 2</a></li>
+                  <li><a href="{% static '/#'%}">Deep Drop Down 3</a></li>
+                  <li><a href="{% static '/#'%}">Deep Drop Down 4</a></li>
+                  <li><a href="{% static '/#'%}">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="{% static '/#'%}">Drop Down 2</a></li>
+              <li><a href="{% static '/#'%}">Drop Down 3</a></li>
+              <li><a href="{% static '/#'%}">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <!-- Your other list items go here -->
+      
+          <li><a href="login.html"><button class="bn33">Sign In</button></a></li>
+      </ul>
+      <ul>
+        <li><a href="register.html"><button class="bn33">Register</button></a></li>
+    </ul>
+        <ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </ul>
+    </nav><!-- .navbar -->
+    
+    </div>
+  </header><!-- End Header -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Registration Form</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <!-- Include jQuery -->
+  
+      <style>
+       
+            body {
+              background-image: url("{% static '/assets/img/r'%}");
+              background-repeat: no-repeat;
+              background-size: cover; /* Adjust this as needed */
+              background-position: center center; /* Adjust this as needed */
+              background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            }
+          /* CSS for the form container */
+          .form-container {
+            background-image: url("{% static '/assets/img/images.jpg'%}");
+            background-size: 400px 200px;
+              max-width: 400px;
+              margin: 0 auto;
+              padding: 1px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              text-align: center;
+          }
+  
+          /* CSS for form field labels */
+          label {
+              display: block;
+              margin-bottom: 8px;
+              font-weight: bold;
+          }
+  
+         
+          /* CSS for form input fields with icons */
+          .input-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+          .input-container i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+          
+          input[type="text"],
+          input[type="password"],
+          input[type="email"],
+          input[type="tel"] {
+              width: calc(110% - 20px); /* Adjust the width to account for the icon */
+              padding: 10px 40px 10px 30px; /* Adjust padding to accommodate icon */
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              font-size: 14px;
+          }
+          
+          /* CSS for the Sign Up button */
+          .signup-button {
+              background-color: #007BFF;
+              color: #fff;
+              border: none;
+              border-radius: 3px;
+              padding: 10px 20px;
+              font-size: 18px;
+              cursor: pointer;
+          }
+  
+          /* CSS for button hover effect */
+          .signup-button:hover {
+              background-color: #0056b3;
+          }
+          .form-container {
+            max-width: 400px; /* Set the desired width for the outer border box */
+            margin: 0 auto;
+            padding: 20px; /* Add padding for content inside the container */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .eye-icon {
+            display: none;
+        }
+        .password-hint {
+            display: none;
+            color: #666;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+      </style>
+  </head>
+  <body>
+      <br><br><br><br><br>
+      <div class="form-container">
+          
+          <h2>Registration Form</h2>
+          <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+              <div class="input-container">
+                  <input type="text" id="username" name="username" placeholder="User Name" required>
+                  <div id="first-name-error" style="color: red;font-size: 14px; "></div>
+                  <i class="fas fa-user"></i>
+              </div>
+              
+  
+              <div class="input-container">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="password" name="password" placeholder="Password" required>
+                  <i id="password-toggle" class="fas fa-eye-slash" style= " left: 330px;  cursor: pointer;"></i>
+                  <div id="password-error" style="color: red; font-size: 14px;"></div>
+              </div>
+              <div id="password-hint" class="password-hint"></div>
+  
+              <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                <div id="confirm-password-error" style="font-size: 14px; color: red;" ></div>
+                <i class="fas fa-eye" id="eye-confirm-password" style="cursor: pointer; left: 330px; "></i>
+            </div>
+            
+  
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="error-message" id="email-error" style=" font-size: 14px; color: red;"></span>
+            </div>
+            
+            <button type="submit" class="signup-button"><i class="fas fa-user-plus"></i> Sign Up</button>
+      
+  
+  <script>
+      var passwordInput = document.getElementById("password");
+      var passwordError = document.getElementById("password-error");
+      var passwordHint = document.getElementById("password-hint");
+      var passwordToggle = document.getElementById("password-toggle");
+
+// Initially hide the eye icon
+passwordToggle.style.display = "none";
+
+// Add an event listener to the password input
+passwordInput.addEventListener("input", function() {
+    // Check if the input value is not empty
+    if (passwordInput.value.trim() !== "") {
+        passwordToggle.style.display = "block"; // Show the eye icon
+    } else {
+        passwordToggle.style.display = "none"; // Hide the eye icon
+    }
+       
+    passwordToggle.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text"; // Show the password
+            passwordToggle.classList.remove("fa-eye-slash");
+            passwordToggle.classList.add("fa-eye");
+        } else {
+            passwordInput.type = "password"; // Hide the password
+            passwordToggle.classList.remove("fa-eye");
+            passwordToggle.classList.add("fa-eye-slash");
+        }
+    
+        passwordInput.addEventListener("input", function() {
+            if (event.inputType === "deleteContentBackward") {
+                // Clear the validation message when backspace is pressed
+                passwordError.textContent = "";
+                return;
+            }
+        });  });
+    
+          var password = passwordInput.value;
+          var uppercaseRegex = /[A-Z]/;
+          var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+          var numberRegex = /[0-9]/;
+          var spaceRegex = /\s/;
+  
+          var isValid = true;
+          var errorMessage = "";
+          
+  
+          // Check if password contains at least one capital letter
+          if (!uppercaseRegex.test(password)) {
+              isValid = false;
+              errorMessage = "Password must contain at least one capital letter.";
+          } else if (!specialCharRegex.test(password)) { // Check if password contains special characters
+              isValid = false;
+              errorMessage = "Password must contain special characters.";
+          } else if (!numberRegex.test(password)) { // Check if password contains numbers
+              isValid = false;
+              errorMessage = "Password must contain numbers (0-9).";
+          } else if (password.length <= 6) { // Check if password length is less than or equal to 6
+              isValid = false;
+              errorMessage = "Password must be longer than 6 characters.";
+          } else if (spaceRegex.test(password)) { // Check if password contains spaces
+              isValid = false;
+              errorMessage = "Password should not contain spaces.";
+          }
+          
+          // Display validation message
+          passwordError.textContent = errorMessage;
+  
+          // Display success message if password is valid
+          if (isValid && password.length > 0) {
+              passwordError.innerHTML = "&#10004; Password is valid.";
+              passwordError.style.color = "green"; 
+          }
+        
+      });  
+      
+     passwordInput.addEventListener("keydown", function(event) {
+    // Clear the error message when backspace is pressed
+    if (event.key === "Backspace") {
+        passwordError.textContent = "";
+    }
+    });
+    passwordInput.addEventListener("focus", function() {
+    passwordHint.textContent = "Hint: No space, at least one uppercase letter, one number from 0-9, one special character, and at least 6 characters long.";
+    passwordHint.style.display = "block";
+});
+    passwordInput.addEventListener("input", function() {
+    passwordHint.style.display = "none"; // Hide the hint when the user starts typing
+});
+
+// Add an event listener to the password input for blur event (when the input loses focus)
+     passwordInput.addEventListener("blur", function() {
+    passwordHint.style.display = "none";
+});
+passwordInput.addEventListener("click", function() {
+    // Show the hint box when the user clicks on the input
+    passwordHint.style.display = "block";
+    displayHint = true; // Set displayHint to true so the hint will reappear after clicking
+});
+
+// Add an event listener to the password input for keydown event (detect backspace)
+    passwordInput.addEventListener("keydown", function(event) {
+    if (event.key === "Backspace") {
+        // Show the hint box when backspace is pressed
+        passwordHint.style.display = "block";
+        displayHint = true; // Set displayHint to true so the hint will reappear after backspace
+    }
+});
+var firstNameInput = document.getElementById("first_name");
+var firstNameError = document.getElementById("first-name-error");
+
+firstNameInput.addEventListener("input", function(event) {
+    if (event.inputType === "deleteContentBackward") {
+        // Clear the validation message when backspace is pressed
+        firstNameError.textContent = "";
+        return;
+    }
+
+    var firstName = firstNameInput.value;
+    var firstLetter = firstName.charAt(0);
+    var restOfName = firstName.slice(1);
+    var noSpaceRegex = /^\S*$/;
+    var onlyLettersRegex = /^[a-zA-Z]*$/;
+    var isValid = true;
+    var errorMessage = "";
+
+    // Check if the first letter is capital
+    if (firstLetter !== firstLetter.toUpperCase()) {
+        isValid = false;
+        errorMessage = "First letter must be capital.";
+    } else if (!noSpaceRegex.test(restOfName)) {
+        // Check for spaces in the rest of the name
+        isValid = false;
+        errorMessage = "Name should not contain spaces.";
+    } else if (!onlyLettersRegex.test(restOfName)) {
+        // Check for both special characters and numbers in the rest of the name
+        isValid = false;
+        errorMessage = "Name should only contain letters.";
+    }
+
+    // Display validation message under the text box
+    firstNameError.textContent = errorMessage;
+});
+
+          var lastNameInput = document.getElementById("last_name");
+          var lastNameError = document.getElementById("lastName-error");
+          
+          lastNameInput.addEventListener("keydown", function(event) {
+              // Clear the error message when backspace is pressed
+              if (event.key === "Backspace") {
+                  lastNameError.textContent = "";
+              }
+          });
+          
+             lastNameInput.addEventListener("input", function() {
+              var lastName = lastNameInput.value;
+              var spaceRegex = /\s/;
+              var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+              var numberRegex = /\d/;
+          
+              var errorMessage = "";
+          
+              // Check if last name contains spaces, special characters, or numbers
+              if (spaceRegex.test(lastName)) {
+                  errorMessage = "Last Name should not contain spaces.";
+              } else if (specialCharRegex.test(lastName)) {
+                  errorMessage = "Last Name should not contain special characters.";
+              } else if (numberRegex.test(lastName)) {
+                  errorMessage = "Last Name should not contain numbers.";
+              }
+          
+              // Display validation message under the textbox in green color
+              lastNameError.textContent = errorMessage;
+          });
+          var passwordInput = document.getElementById("password");
+          var confirmPasswordInput = document.getElementById("confirmPassword");
+          var confirmPasswordError = document.getElementById("confirm-password-error");
+          var eyeConfirmPassword = document.getElementById("eye-confirm-password");
+
+          // Initially hide the eye icon
+          eyeConfirmPassword.style.display = "none";
+          
+          // Add an event listener to the confirm password input
+          confirmPasswordInput.addEventListener("input", function() {
+              // Check if the input value is not empty
+              if (confirmPasswordInput.value.trim() !== "") {
+                  eyeConfirmPassword.style.display = "block"; // Show the eye icon
+              } else {
+                  eyeConfirmPassword.style.display = "none"; // Hide the eye icon
+              }
+          });
+          
+          // Add an event listener to toggle the confirm password visibility
+          eyeConfirmPassword.addEventListener("click", function() {
+              if (confirmPasswordInput.type === "password") {
+                  confirmPasswordInput.type = "text"; // Show the confirm password
+                  eyeConfirmPassword.classList.remove("fa-eye");
+                  eyeConfirmPassword.classList.add("fa-eye-slash");
+              } else {
+                  confirmPasswordInput.type = "password"; // Hide the confirm password
+                  eyeConfirmPassword.classList.remove("fa-eye-slash");
+                  eyeConfirmPassword.classList.add("fa-eye");
+              }
+          });    
+       confirmPasswordInput.addEventListener("input", function(event) {
+      if (event.inputType === "deleteContentBackward") {
+          // Clear the validation message when backspace is pressed
+          confirmPasswordError.textContent = "";
+          return;
+      }
+  
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
+  
+      var isValid = true;
+      var errorMessage = "";
+  
+      // Check if confirm password matches the password
+      if (confirmPassword !== password) {
+          isValid = false;
+          errorMessage = "Passwords do not match.";
+      }
+  
+      // Display validation message under the confirm password textbox
+      confirmPasswordError.textContent = errorMessage;
+  
+      // Show password valid message with a tick if passwords match
+      if (isValid) {
+          confirmPasswordError.textContent = "Passwords match.";
+          confirmPasswordError.style.color = "green"; 
+      }
+  });
+  
+  passwordInput.addEventListener("input", function() {
+      // Clear the confirm password validation message when password is typed or changed
+     Error.textContent = "";
+  });
+  var emailInput = document.getElementById("email");
+  var errorSpan = document.getElementById("email-error");
+  
+  emailInput.addEventListener("input", function() {
+      var email = emailInput.value;
+      // Updated regular expression pattern
+      var pattern = /^[a-z][a-z0-9._]+@(gmail\.com|in|org)$/;
+  
+      // Check if the email matches the required pattern
+      if (!email.match(pattern)) {
+          errorSpan.textContent = "Invalid email format. Please enter a valid email address ending with @gmail.com, @in, or @org.";
+      } else {
+          errorSpan.textContent = ""; // Clear error message
+  
+          // Check if the email is already registered using AJAX
+          // Your AJAX code goes here
+      }
+      if (event.inputType === "deleteContentBackward") {
+          errorSpan.textContent = ""; // Clear error message for backspace
+          return;
+      }
+  });
+  
+  var phoneInput = document.getElementById("phone_number");
+  var phoneError = document.getElementById("phone-error");
+  
+  phoneInput.addEventListener("input", function(event) {
+      var phoneNumber = phoneInput.value;
+      var errors = [];
+  
+      if (phoneNumber.length !== 10) {
+          errors.push("Phone number must be 10 digits.");
+      } else {
+          phoneError.textContent = ""; // Clear the error message for length condition
+      }
+  
+      if (!/^\d+$/.test(phoneNumber)) {
+          errors.push("Phone number must contain only digits.");
+      } else {
+          phoneError.textContent = ""; // Clear the error message for digits-only condition
+      }
+  
+      if (phoneNumber.startsWith("0")) {
+          errors.push("Phone number cannot start with 0.");
+      }
+  
+      // Check if all numbers are the same
+      if (/^(\d)\1{9}$/.test(phoneNumber)) {
+          errors.push("Phone number cannot consist of the same digit repeated.");
+      }
+  
+      if (errors.length > 0) {
+          phoneError.textContent = errors.join(" ");
+      }
+  });
+  
+  phoneInput.addEventListener("keydown", function(event) {
+      // Clear the error message when backspace is pressed
+      if (event.key === "Backspace") {
+          phoneError.textContent = "";
+      }
+  });  
+          
+      
+  </script>
+  </body>
+  </html>
+  
+
+        
