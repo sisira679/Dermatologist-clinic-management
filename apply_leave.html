@@ -1,0 +1,11 @@
+
+  <h2>Apply for Leave</h2>
+
+  <form method="post" action="{% url 'apply_leave' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit">Submit Leave Request</button>
+  </form>
+
