@@ -1,0 +1,41 @@
+<!-- view_patient_history.html -->
+
+<html>
+    <body>
+    <!-- view_patient_history.html -->
+
+    <div class="page-content">
+        <h2>Patient History for {{ patient.first_name }} {{ patient.last_name }}</h2>
+
+        {% if patient_history %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time Slot</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for appointment in patient_history %}
+                        <tr>
+                            <td>{{ appointment.date }}</td>
+                            <td>{{ appointment.time_slot }}</td>
+                            <td>{{ appointment.reason }}</td>
+                            <td>
+                                <a href="{% url 'doctor_prescription_view' appointment.id %}" class="btn btn-primary">
+                                    View Prescription
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No history available for this patient.</p>
+        {% endif %}
+    </div>
+
+
+</body>
+</html>
