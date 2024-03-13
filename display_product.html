@@ -1,0 +1,213 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Template</title>
+    <style>
+        /* General CSS styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 90px;
+        }
+      
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+        .icon {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        /* Category navigation styles */
+        .category-nav {
+            background-color: #c55340; /* Light blue */
+            color: #fff;
+            padding: 30px -90px; 
+            text-align: center;
+        }
+        .category-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .category-nav li {
+            margin: 0 20px; /* Adjusted margin */
+            position: relative;
+        }
+        .category-nav li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px -80px; /* Adjusted padding */
+            display: block;
+        }
+        .category-nav li:hover .subcategory {
+            display: block;
+        }
+        .subcategory {
+            display: none;
+            position: absolute;
+            background-color:#d7887b ;
+            width: 150px; /* Adjusted width */
+            top: 100%;
+            left: 0;
+            z-index: 1;
+        }
+        .subcategory a {
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+        /* CSS for the dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f4ece1;
+  padding: 8px 12px; /* Adjusted padding */
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4ece1;
+}
+
+
+
+    </style>
+</head>
+{% include 'home.html' %}
+<br><br>
+    <div class="category-nav">
+        <div class="container">
+            <ul>
+             
+                <div class="category-nav">
+                    <div class="container">
+                        <ul>
+                            {% for category in categories %}
+                            <li>
+                                <a href="#">{{ category.name }}</a>
+                                <div class="subcategory">
+                                    {% for subcategory in category.subcategory_set.all %}
+                                    <a href="?subcategory={{ subcategory.name }}">{{ subcategory.name }}</a>
+                                    {% endfor %}
+                                </div>
+                                
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+      
+   
+        <div class="products">
+            {% for product in products %}
+            <div class="product">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <div class="product-name">{{ product.name }}</div>
+                <div class="product-info">
+                    <p class="price">
+                        <span class="original-price">${{ product.price }}</span>
+                       &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp <span class="sale-price">${{ product.sale_price }}</span>
+                    </p>
+                    <div class="product-description">{{ product.description }}</div>
+                    <br>
+                    <div class="product-icons">
+                        <form action="{% url 'add_to_wishlist' product.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="wishlist-btn {% if product_in_wishlist %}active{% endif %}">
+                                <img src="{% static 'assets/img/wishlist.png' %}" alt="Add to Wishlist" width="30" height="30">
+                            </button>
+                        </form>
+                        
+                        &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp 
+                        <form action="{% url 'add-to-cart' product.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="cart-btn">
+                                <img src="{% static 'assets/img/cart1.png' %}" alt="Add to Cart" width="30" height="30">
+                            </button>
+                        </form>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+                
+            </div>
+            {% endfor %}
+        </div>
+       
+    </div>
+   
+ 
+    <script>
+        // Function to handle clicking on the wishlist icon
+        function addToWishlist(productId) {
+            // Get the wishlist icon element
+            var wishlistIcon = document.getElementById(productId);
+    
+            // Add a class to change the color to red
+            wishlistIcon.classList.add('red');
+    
+            // Redirect to the wishlist page
+            window.location.href = '/wishlist.html'; // Update the URL as per your project structure
+        }
+
+        
+    </script>
+
+</body>
+</html>
